@@ -1,9 +1,9 @@
 from pyrogram import Client, filters
-from os import environ
+from os import getenv
 
-app_id = int(environ.get('ID'))
-api_hash = environ.get('HASH')
-bot_token = environ.get('TOKEN')
+app_id = int(getenv('API_ID'))
+api_hash = getenv('API_HASH', '')
+bot_token = getenv('BOT_TOKEN', '') 
 
 bot = Client(    
     name='test-bot',
